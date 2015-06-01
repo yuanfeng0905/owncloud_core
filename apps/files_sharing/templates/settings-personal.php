@@ -3,6 +3,8 @@
 /** @var array $_ */
 script('files_sharing', 'settings-personal');
 style('files_sharing', 'settings-personal');
+script('files_sharing', '3rdparty/gs-share/gs-share');
+style('files_sharing', '3rdparty/gs-share/style');
 ?>
 <div id="fileSharingSettings" class="section">
 	<h2><?php p($l->t('Federated Cloud'));?></h2>
@@ -17,12 +19,21 @@ style('files_sharing', 'settings-personal');
 
 	<p>
 
+	<div class='gs-share'>
+		<button data-url='<?php p($_['reference']); ?>'
+				data-title='<?php p(urlencode($_['message_without_URL'])); ?>'
+				class='js-gs-share gs-share'>
+		</button>
+	</div>
+
 	<img src='TODO: Add Diaspora Button' style="border: 0px solid;" alt='Share on Diaspora' data-url='http://sharetodiaspora.github.io/?title=<?php p($_['message_without_URL']); ?>&url=<?php p($_['reference']); ?>' />
 	<img src='TODO: Add Twitter Button' alt=' | Share on Twitter' data-url='https://twitter.com/intent/tweet?text=<?php p(urlencode($_['message_with_URL'])); ?>' />
 	<img src='TODO: Add Facebook Button' alt=' | Share on Facebook' data-url='https://www.facebook.com/sharer/sharer.php?u=<?php p($_['reference']); ?>' />
 	<img src='TODO: Add Google+ Button' alt=' | Share on Google+' data-url='https://plus.google.com/share?url=<?php p($_['reference']); ?>'/>
 
 	</p>
+
+	<br />
 
 	<h3>Add your Federated Cloud Id to your homepage:</h3>
 
