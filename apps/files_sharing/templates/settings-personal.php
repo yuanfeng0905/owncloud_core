@@ -17,7 +17,7 @@ style('files_sharing', '3rdparty/gs-share/style');
 
 		<p>
 
-		<h3>Share your Federated Cloud Id:</h3>
+		<h3><?php p($l->t('Share your Federated Cloud Id:')); ?></h3>
 
 		<p>
 
@@ -42,7 +42,7 @@ style('files_sharing', '3rdparty/gs-share/style');
 
 		<br/>
 
-		<h3>Add your Federated Cloud Id to your homepage:</h3>
+		<h3><?php p($l->t('Add your Federated Cloud Id to your homepage:')); ?></h3>
 
 		<p>
 
@@ -52,7 +52,7 @@ style('files_sharing', '3rdparty/gs-share/style');
 			</a>
 
 			<br/>
-			HTML Code:
+			<?php p($l->t('HTML Code:')); ?>
 			<br/>
 
 			<xmp>
