@@ -30,6 +30,7 @@ $cloudID = $uid . '@' . rtrim(\OCA\Files_Sharing\Helper::removeProtocolFromUrl($
 $url = 'https://owncloud.org/federation';
 
 $tmpl = new OCP\Template('files_sharing', 'settings-personal');
+$tmpl->assign('outgoingServer2serverShareEnabled', \OCA\Files_Sharing\Helper::isOutgoingServer2serverShareEnabled());
 $tmpl->assign('message_with_URL', $l->t('Share with me through my #ownCloud federation Id %s see %s', [$cloudID, $url]));
 $tmpl->assign('message_without_URL', $l->t('Share with me through my #ownCloud federation Id %s', [$cloudID]));
 $tmpl->assign('reference', $url);
